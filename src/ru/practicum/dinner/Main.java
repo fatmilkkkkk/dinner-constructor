@@ -67,6 +67,9 @@ public class Main {
             nextItem = scanner.nextLine();
         }
         // вызываю метод у переменной dc для генерации комбинации блюд и вывода их на экран
-        dc.generateCombosOfDish(numberOfCombos, typesOfDishes);
+        ArrayList<ArrayList<String>> generatedCombos = dc.generateCombos(numberOfCombos, typesOfDishes);
+        for (int i = 0; i < numberOfCombos; i++) {
+            System.out.println(generatedCombos.get(i));
+        }
     }
 }
